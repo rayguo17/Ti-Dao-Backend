@@ -13,3 +13,8 @@ services:
       - pg_hack_data:/var/lib/postgresql/data:rw
     environment:
       POSTGRES_PASSWORD: postgres
+  cache:
+    image: redis:6.2.5
+    ports:
+      - 16379:6379
+    container_name: redis_dash
